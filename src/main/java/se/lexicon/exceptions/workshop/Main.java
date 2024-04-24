@@ -1,6 +1,8 @@
 package se.lexicon.exceptions.workshop;
 
 import java.io.IOException;
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 import se.lexicon.exceptions.workshop.data_access.NameService;
@@ -26,14 +28,16 @@ public class Main {
             Person myTestPerson = nameService.getNewRandomPerson(); //create new person
             System.out.println(myTestPerson.toString());
 
-
-
-
+            List<String> maleTestNames = new ArrayList<>();
+            maleTestNames.add("testName1");
+            maleTestNames.add("testName2");
+            maleTestNames.add("testName3");
+            maleTestNames.add("testName4");
+            CSVReader_Writer.saveMaleNames(maleTestNames);
 
         } catch (IOException e) {
             System.out.println("Error while trying to fetch last names from file: " + e.getMessage());
         }
-
 
 
     }
