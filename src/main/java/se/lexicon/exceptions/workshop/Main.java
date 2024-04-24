@@ -29,12 +29,14 @@ public class Main {
             Person myTestPerson = nameService.getNewRandomPerson(); //create new person
             System.out.println(myTestPerson.toString());
 
-            List<String> maleTestNames = new ArrayList<>();
+            //This block of code edited the file directly, big mistake
+            /*List<String> maleTestNames = new ArrayList<>();
             maleTestNames.add("testName1");
             maleTestNames.add("testName2");
             maleTestNames.add("testName3");
             maleTestNames.add("testName4");
-            CSVReader_Writer.saveMaleNames(maleTestNames);
+            CSVReader_Writer.saveMaleNames(maleTestNames);*/
+
 
             nameService.addMaleFirstName("testName1"); //this should be a duplicate
 
